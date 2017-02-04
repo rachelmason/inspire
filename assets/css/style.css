@@ -1,0 +1,66 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(232, 230, 227);
+    font-family: 'Raleway', sans-serif;
+    /*z-index: 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    width: 100vw;
+    height: 100vh;*/
+}
+p{
+    font-size: 31px;
+}
+/*.raised{
+    z-index: 1;
+    position: absolute;
+}*/
+
+.cross{
+    text-decoration: line-through;
+}
+
+#time{
+    font-size: 145px;
+}
+#weather{
+    font-size: 24px;
+}
+.flex-quote{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10%;
+    width: 100vw;
+}
+.flex-time{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100vw;
+}
+.flex-todo{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 5%;
+    width: 99vw;
+}
+.flex-item{
+
+}
+
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: rgb(94, 86, 76);
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid rgb(94, 86, 76);
+     box-shadow: 0 1px 0 0 rgb(94, 86, 76);
+   }

@@ -3,27 +3,59 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Josefin+Sans|Josefin+Slab|Prata|Raleway|Suez+One" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="body">
+<body id="body" style="background-image:url(https://source.unsplash.com/category/nature)">
+<!--<div id="image">
+	<div class="bg" :style="bgStyle">
+
+	</div>
+</div>-->
+<div class="raised">
 	<div id="weather">
-		{{weather}}
-	</div>
-
-	<div id="quote">
-
-	</div>
-
-	<div id="todo">
+		{{weather.name}} 
+		<div style="cursor: pointer"@click="toggleTemp">{{displayTemp}}</div>
+		
 
 	</div>
+	<div id="time" class="flex-time">
+		<div class="flex-item">
+		{{currentTime}}
+		<p>{{hello}}</p>
+		</div>
+	</div>
+	<div id="quote" class="flex-quote">
+		<div class="flex-item">
+		{{currentQuote}}
+		</div>
+	</div>
+<div id="todo" class="flex-todo">
+		<div class="flex-item">
+		<ul v-for="(item, index) in todos" style="list-style: none">
+			<li @click="removeTodo(index)" :class="{'cross':item.cross}">
+				{{item.task}}
+				
+
+			</li>
+		</ul>
+		<form @submit.prevent="submitTodo(todo)" class="col s2">
+			<div class="input-field col s1">
+			<input type="text" v-model="todo" placeholder="i need to...">
+			</div>
+		</form>
+		</div>
+	</div>
+
+	
+</div>
 
 
 
-
-		<!--JS Libraries-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+	<!--JS Libraries-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 	<!--Initialize App-->
@@ -38,7 +70,7 @@
 	<script src="app/components/image/image-controller.js"></script>
 	<script src="app/components/quote/quote-controller.js"></script>
 	<script src="app/components/todo/todo-controller.js"></script>
-
+<script src="app/components/time/time-controller.js"></script>
 </body>
 
 </html>
