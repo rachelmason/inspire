@@ -16,6 +16,11 @@ new Vue({
 				if(this.quote){
 					return this.quote.quote
 				}
+			},
+			author: function(){
+				if(this.quote){
+					return this.quote.author
+				}
 			}
 		},
 		methods:{
