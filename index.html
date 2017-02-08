@@ -24,12 +24,15 @@
 	<div id="time" class="flex-time">
 		<div class="flex-item">
 		{{currentTime}}
-		<p>{{hello}}</p>
+		<p>{{greeting}}</p>
 		</div>
 	</div>
 	<div id="quote" class="flex-quote">
 		<div class="flex-item">
 		{{currentQuote}}
+		<div class="show">
+			{{author}}
+		</div>
 		</div>
 	</div>
 <div id="todo" class="flex-todo">
@@ -44,6 +47,7 @@
 		<form @submit.prevent="submitTodo(todo)" class="col s2">
 			<div class="input-field col s1">
 			<input type="text" v-model="todo" placeholder="i need to...">
+			{{count}} to do
 			</div>
 		</form>
 		</div>

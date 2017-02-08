@@ -64,3 +64,13 @@ p{
      border-bottom: 1px solid rgb(94, 86, 76);
      box-shadow: 0 1px 0 0 rgb(94, 86, 76);
    }
+
+.show{
+    opacity: 0;
+}
+   .show:hover{
+       opacity: 1;
+       background-color: rgba(94, 86, 76, .5);
+       text-align: center
+
+   }

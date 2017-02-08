@@ -8,7 +8,7 @@
 		el:"#todo",
 		data:{
 			todos:[],
-			todo:'',
+			todo:''
 			
 		},
 		mounted:function(){
@@ -30,7 +30,21 @@
 				tv.todos.splice(index,1)
 				ts.saveTodos(tv.todos)
 				}, 1000)
-			}
+			},
+		},
+		computed:{
+			count: function(){
+				var total = 0
+				for (var i = 0; i < this.todos.length; i++) {
+					if(this.todos.length >0){
+					total += 1
+			
+					}
+					
+				}
+				return total
+			},
+
 		}
 
 
